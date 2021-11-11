@@ -31,6 +31,8 @@ class DingtalkBot {
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8',
 			},
+		}).then(e => {
+			console.log(e);
 		})
 	}
 	sendMessage(message) {
