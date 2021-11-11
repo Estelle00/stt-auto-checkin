@@ -1,5 +1,6 @@
 const { DINGTALK_WEBHOOK, DINGTALK_SECRET }  = require("./config")
 const dayjs = require("dayjs");
+const crypto = require("crypto");
 const axios = require("axios");
 class DingtalkBot {
 	timer = null;
