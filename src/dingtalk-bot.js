@@ -40,7 +40,7 @@ class DingtalkBot {
 			clearTimeout(this.timer);
 			this.timer = null;
 		}
-		const nowFormat = dayjs().format("HH:mm:ss")
+		const nowFormat = dayjs().add(6, "hour").format("HH:mm:ss")
 		this.text += `- ${nowFormat} ${message}\n`;
 		this.timer = setTimeout(() => {
 			this.send({
