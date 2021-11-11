@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - uses: EgorDm/gha-yarn-node-cache@v1
+    - uses: mskelton/setup-yarn@v1.1.0
     - run: yarn install
     - name: Run
       env:
