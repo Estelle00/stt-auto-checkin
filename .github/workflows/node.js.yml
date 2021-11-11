@@ -1,0 +1,21 @@
+name: stt签到
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: EgorDm/gha-yarn-node-cache@v1
+    - run: yarn install
+    - name: Run
+      env:
+        DOMAIN: ${{ secrets.DOMAIN }}
+        USER_NAME: ${{ secrets.USER_NAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+    - run: node src/index
