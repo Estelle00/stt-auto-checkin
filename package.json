@@ -1,0 +1,14 @@
+{
+  "name": "stt-auto-checkin",
+  "version": "1.0.0",
+  "description": "stt自动签到",
+  "main": "./src/index",
+  "repository": "git@github.com:Estelle00/stt-auto-checkin.git",
+  "author": "Estelle00",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "crypto": "^1.0.1",
+    "dayjs": "^1.10.7"
+  }
+}
