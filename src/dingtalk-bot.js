@@ -32,7 +32,7 @@ class DingtalkBot {
 				'Content-Type': 'application/json;charset=utf-8',
 			},
 		}).then(e => {
-			console.log(e);
+			console.log(e.data);
 		})
 	}
 	sendMessage(message) {
@@ -44,7 +44,7 @@ class DingtalkBot {
 		this.text += `- ${nowFormat} ${message}\n`;
 		this.timer = setTimeout(() => {
 			this.send({
-				msgType: "markdown",
+				msgtype: "markdown",
 				markdown: {
 					title: "stt签到日志",
 					text: this.text
