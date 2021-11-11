@@ -26,13 +26,13 @@ class DingtalkBot {
 				msg: 'webhook和secret不能为空',
 			})
 		}
-		return axios.post(this.allWebhookUrl, {
-			data,
+		console.log(data);
+		return axios.post(this.allWebhookUrl,data, {
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8',
 			},
 		}).then(e => {
-			console.log(e.data);
+			console.log(e.data?.errmsg);
 		})
 	}
 	sendMessage(message) {
